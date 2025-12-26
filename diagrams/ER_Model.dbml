@@ -1,0 +1,69 @@
+Table region {
+  id int [pk, increment]
+  name varchar
+  infrastructure_status varchar
+  transportation varchar
+  avg_building_age int
+  supply_status varchar
+  student_contribution float
+}
+
+Table property_type {
+  id int [pk, increment]
+  region_id int
+  room_count varchar
+  area_sqm int
+  building_type varchar
+  is_furnished boolean
+  building_age int
+  has_elevator boolean
+  insulation_good boolean
+  risk_level varchar
+}
+
+Table price_info {
+  id int [pk, increment]
+  region_id int
+  property_type_id int
+  rent_price int
+  rent_price_per_sqm float
+  sale_price int
+  sale_price_per_sqm float
+  payback_years float
+  price_date date
+}
+
+Table demand_structure {
+  id int [pk, increment]
+  region_id int
+  student_share float
+  civil_servant_share float
+  tradesmen_share float
+  single_share float
+  overall_demand_note text
+}
+
+Table demographics {
+  id int [pk, increment]
+  region_id int
+  african_ratio float
+  earthquake_victim_ratio float
+  student_count int
+  household_count int
+}
+
+Table market_note {
+  id int [pk, increment]
+  region_id int
+  source varchar
+  note text
+  note_date date
+}
+
+/* Relationships */
+Ref: property_type.region_id > region.id
+Ref: price_info.region_id > region.id
+Ref: price_info.property_type_id > property_type.id
+Ref: demand_structure.region_id > region.id
+Ref: demographics.region_id > region.id
+Ref: market_note.region_id > region.id

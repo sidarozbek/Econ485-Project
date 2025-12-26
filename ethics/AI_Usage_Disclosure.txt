@@ -1,0 +1,17 @@
+AI USAGE DISCLOSURE
+
+This project was developed with the support of an AI-based tool (ChatGPT) used strictly as a
+technical assistant during the following stages:
+
+- Entity–Relationship (ER) diagram design and data modeling discussions,
+- Conversion of conceptual models into MySQL-compatible database schemas,
+- Generation of synthetic (non-real) data for testing purposes,
+- Development and refinement of SQL queries,
+- Technical clarification and troubleshooting during the implementation process.
+
+All modeling decisions, database design choices, analytical approaches, and interpretations
+of results were made by the author. The AI tool did not independently generate conclusions
+or make autonomous decisions.
+
+The use of AI was limited to assistance and guidance, and the final responsibility for the
+content, structure, and conclusions of this project belongs entirely to the author.
